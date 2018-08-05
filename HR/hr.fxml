@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HR.Controller">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="1314.0" styleClass="vbox" stylesheets="@../inventory/style.css">
+         <children>
+            <Region prefHeight="52.0" prefWidth="61.0" />
+            <ImageView fitHeight="43.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../inventory/ic.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="43.0" prefWidth="485.0" />
+            <Label text="FINANCIAL SOFTWARE" textFill="#1f8ca3">
+               <font>
+                  <Font name="KenyanCoffeeRg-Regular" size="26.0" />
+               </font>
+            </Label>
+            <Region prefHeight="43.0" prefWidth="350.0" />
+         </children>
+      </HBox>
+      <VBox layoutY="44.0" prefHeight="714.0" prefWidth="156.0" styleClass="hbox" stylesheets="@../inventory/style.css">
+         <children>
+            <Region prefHeight="26.0" prefWidth="156.0" />
+            <JFXButton fx:id="btnSale" graphicTextGap="20.0" onAction="#btnSaleClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../inventory/style.css" text="Sales        ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReceivable" graphicTextGap="20.0" onAction="#btnReceivableClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../inventory/style.css" text="Receivables">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnInventory" graphicTextGap="20.0" onAction="#btnInventoryClicked" prefHeight="44.0" prefWidth="158.0" text="Inventory">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHr" graphicTextGap="20.0" onAction="#btnHrClicked" prefHeight="44.0" prefWidth="158.0" styleClass="active" stylesheets="@style.css" text="H.R         ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReports" graphicTextGap="20.0" onAction="#btnReportsClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../inventory/style.css" text="Reports  ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSettings" graphicTextGap="20.0" onAction="#btnSettingsClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../inventory/style.css" text="Settings  ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" graphicTextGap="20.0" onAction="#btnExitClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../inventory/style.css" text="EXIT        ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../inventory/ic8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Region prefHeight="311.0" prefWidth="156.0" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="155.0" text="Copyright.2017" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="KenyanCoffeeRg-Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TableView fx:id="hrTableView" layoutX="405.0" layoutY="111.0" prefHeight="647.0" prefWidth="910.0">
+         <columns>
+            <TableColumn fx:id="empIdCol" prefWidth="61.0" text="EmpID" />
+            <TableColumn fx:id="fNameCol" minWidth="0.0" prefWidth="97.0" text="F.Name" />
+            <TableColumn fx:id="lNameCol" minWidth="0.0" prefWidth="79.0" text="L.Name" />
+            <TableColumn fx:id="sNameCol" prefWidth="78.0" text="S.Name" />
+            <TableColumn fx:id="IdNoCol" prefWidth="88.0" text="I.D No." />
+            <TableColumn fx:id="emailCol" prefWidth="121.0" text="Email" />
+            <TableColumn fx:id="deptCol" minWidth="0.0" prefWidth="72.240234375" text="Dept." />
+            <TableColumn fx:id="doeCol" minWidth="0.0" prefWidth="91.0" text="DoE" />
+            <TableColumn fx:id="phoneNoCol" prefWidth="111.0" text="Phone No." />
+            <TableColumn fx:id="dobCol" prefWidth="110.0" text="DoB" />
+         </columns>
+      </TableView>
+      <GridPane layoutX="156.0" layoutY="103.0" prefHeight="503.0" prefWidth="200.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXTextField fx:id="tfFname" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="First Name" unFocusColor="#1f8ca3" />
+            <JFXDatePicker fx:id="dpDob" defaultColor="#1f8ca3" disable="true" prefHeight="31.0" prefWidth="226.0" promptText="Date Of Birth" showWeekNumbers="true" GridPane.rowIndex="8" />
+            <JFXTextField fx:id="tfSurname" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="340.0" minWidth="209.0" prefHeight="31.0" prefWidth="209.0" promptText="Surname" unFocusColor="#1f8ca3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="tfIdNo" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="I.D Number" unFocusColor="#1f8ca3" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="tfEmail" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="Email" unFocusColor="#1f8ca3" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="tfPhoneNo" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="Phone Number" unFocusColor="#1f8ca3" GridPane.rowIndex="7" />
+            <JFXTextField fx:id="tfDepartment" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="Department" unFocusColor="#1f8ca3" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="tfLname" disable="true" focusColor="#18626f" labelFloat="true" maxWidth="298.0" minWidth="39.0" prefHeight="31.0" prefWidth="217.0" promptText="Last Name" unFocusColor="#1f8ca3" GridPane.rowIndex="1" />
+            <JFXDatePicker fx:id="dpDoe" defaultColor="#1f8ca3" disable="true" prefHeight="31.0" prefWidth="226.0" promptText="Date Of Employment" showWeekNumbers="true" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <JFXButton fx:id="btnSave" disable="true" layoutX="160.0" layoutY="628.0" onAction="#btnSaveClicked" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #19937f;" text="Save" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sales/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnEdit" layoutX="290.0" layoutY="628.0" onAction="#btnEditClicked" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #1f8ca3;" text="Edit" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="67.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sales/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAddNew" layoutX="424.0" layoutY="58.0" onAction="#btnAddNewClicked" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #19937f;" text="Add New" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sales/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="1200.0" layoutY="60.0" onAction="#btnDeleteClicked" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #ba284e;" text="Delete" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sales/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="tfSearchFirstName" focusColor="#18626f" labelFloat="true" layoutX="655.0" layoutY="72.0" maxWidth="275.0" minWidth="172.0" onKeyReleased="#tfSearchFirstName" prefHeight="31.0" prefWidth="275.0" promptText="Type Employee First Name ..." unFocusColor="#1f8ca3" />
+      <JFXButton fx:id="btnRefresh" layoutX="1080.0" layoutY="60.0" onAction="#btnRefreshedClicked" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #19937f;" text="Refresh" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sales/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="156.0" layoutY="755.0" prefHeight="0.0" prefWidth="1157.0" />
+      <Label layoutX="161.0" layoutY="57.0" prefHeight="29.0" prefWidth="200.0" text="HUMAN RESOURCE" textFill="#1f8ca3">
+         <font>
+            <Font name="Arial Narrow" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+
+
+.button:pressed {
+    -fx-background-color: #1f8ca3;
+    -fx-text-fill: white;
+}
+
+.vbox
+{
+    -fx-border-color:#BDBDBD red #BDBDBD red;
+    -fx-background-color:white;
+    -fx-border-width: 1 0 1 0;
+    -fx-border-style: solid solid solid solid;
+    -fx-effect: dropshadow(three-pass-box, rgba(88, 104, 107, 0.2), 10, 0, 0, 0);
+}
+.hbox
+{
+    -fx-background-color:#1f8ca3;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,45 @@
+
+
+.button:pressed {
+    -fx-background-color: #1f8ca3;
+    -fx-text-fill: white;
+}
+
+.vbox
+{
+    -fx-border-color:#BDBDBD #BDBDBD #BDBDBD #BDBDBD;
+    -fx-background-color:white;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-style: solid solid solid solid;
+    -fx-effect: dropshadow(three-pass-box, rgba(88, 104, 107, 0.2), 10, 0, 0, 0);
+}
+.hbox
+{
+    -fx-background-color:#1f8ca3;
+    -fx-text-fill: white;
+}
+
+.button
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+}
+
+.active {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+}
+
+.combo-box
+{
+    -fx-text-fill: white;
+}
+
+.text-field
+{
+    -fx-text-fill: white;
+}

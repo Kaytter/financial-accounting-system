@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Reports.Controller">
+   <children>
+      <HBox layoutX="-3.0" prefHeight="45.0" prefWidth="1321.0" styleClass="vbox" stylesheets="@style.css">
+         <children>
+            <Region prefHeight="52.0" prefWidth="61.0" />
+            <ImageView fitHeight="43.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ic.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="43.0" prefWidth="492.0" />
+            <Label text="FINANCIAL SOFTWARE" textFill="#1f8ca3">
+               <font>
+                  <Font name="KenyanCoffeeRg-Regular" size="26.0" />
+               </font>
+            </Label>
+            <Region prefHeight="43.0" prefWidth="350.0" />
+         </children>
+      </HBox>
+      <VBox layoutY="44.0" prefHeight="714.0" prefWidth="156.0" styleClass="hbox" stylesheets="@style.css">
+         <children>
+            <Region prefHeight="26.0" prefWidth="156.0" />
+            <JFXButton fx:id="btnSales" graphicTextGap="20.0" onAction="#btnSalesClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@../sales/style.css" text="Sales        ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../sales/ic2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+           <JFXButton fx:id="btnExpenses" graphicTextGap="20.0" onAction="#btnExpensesClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@style.css" text="Receivables">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnInventory" graphicTextGap="20.0" onAction="#btnInventoryClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@style.css" text="Inventory">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHR" graphicTextGap="20.0" onAction="#btnHRclicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@style.css" text="H.R         ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReports" graphicTextGap="20.0" onAction="#btnReportsClicked" prefHeight="44.0" prefWidth="158.0" stylesheets="@style.css" text="Reports  ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="hbox" />
+                  <String fx:value="active" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="btnSettings1" graphicTextGap="20.0" onAction="#btnSettingsClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@style.css" text="Settings  ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnExit1" graphicTextGap="20.0" onAction="#btnExitClicked" prefHeight="44.0" prefWidth="158.0" styleClass="hbox" stylesheets="@style.css" text="EXIT        ">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ic8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AreaChart fx:id="areaChart" layoutX="156.0" layoutY="97.0" prefHeight="588.0" prefWidth="566.0" title="BEST SELLERS">
+        <xAxis>
+          <CategoryAxis side="LEFT" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Amount (KES)" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <PieChart fx:id="pieChart" labelLineLength="25.0" layoutX="761.0" layoutY="206.0" legendVisible="false" prefHeight="346.0" prefWidth="557.0" title="CURRENT STOCK AVAILABLE" />
+   </children>
+</AnchorPane>
